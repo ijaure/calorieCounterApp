@@ -10,60 +10,83 @@
         android:id="@+id/intro_next_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="188dp"
         android:text="NEXT"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="494dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/intro_weight_lb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
         android:text="Current Weight:"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="387dp" />
+        app:layout_constraintBottom_toTopOf="@+id/intro_skip_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/intro_gender_lb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
         android:text="Gender:"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="295dp" />
+        app:layout_constraintBottom_toTopOf="@+id/intro_weight_lb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/intro_height_lb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
         android:text="Height:"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="205dp" />
+        app:layout_constraintBottom_toTopOf="@+id/intro_gender_lb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/intro_age_lb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
         android:text="Age:"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="123dp" />
+        app:layout_constraintBottom_toTopOf="@+id/intro_height_lb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.698" />
 
     <Button
         android:id="@+id/intro_skip_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
         android:text="Skip"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="494dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/intro_next_btn"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="126dp" />
+        android:id="@+id/intro_age_spin"
+        android:layout_width="115dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toEndOf="@+id/intro_age_lb"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.179" />
 </androidx.constraintlayout.widget.ConstraintLayout>
