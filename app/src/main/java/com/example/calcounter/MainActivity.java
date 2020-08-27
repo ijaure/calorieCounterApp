@@ -19,9 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
         //Declares a spinner and finds it by id
         final Spinner intro_age_spin = (Spinner) findViewById(R.id.intro_age_spin);
+        final Spinner intro_height_spin = (Spinner) findViewById(R.id.intro_height_spin);
 
-        /*Create an array adapter which will hold the array values and integrate
-        them with the spinner.
+        /*Create an array adapter which will hold the array values to be integrated
+        with the spinner.
        The container take:
          1. Context
          2. Resource file
@@ -30,12 +31,17 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> age_adapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ages));
 
+        ArrayAdapter <String> height_adapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,
+                getResources().getStringArray(R.array.height));
+
+
         //Specify that this adapter will be a dropdown list and give it a built-in android layout
         age_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        height_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         //Set the spinner to this created adapter
         intro_age_spin.setAdapter(age_adapter);
-
+        intro_height_spin.setAdapter(height_adapter);
 
         //Setting up a listener to act on selection
         intro_age_spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -50,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
 
     }
 }
